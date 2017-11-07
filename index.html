@@ -12,13 +12,28 @@
         .box .list li{margin-bottom:15px; border:5px solid #ddd; border-radius:5px; box-shadow:0px 10px 30px #666;}
         .box .list li .top{padding:5px 0; background:rgba(224, 224, 224, 0.2)}
         .box .list li .top h3{color:#333;}
-        video{width:100%; height:100%;}
+        video{width:100%;max-width:630px;min-width: 320px; height:100%;}
+		.audiolist, .audioul{width: 100%;display: flex;flex-direction: column;align-items: center;justify-content: center;}
+		.audiolist .audioul > li{width: 100%;max-width: 640px;min-width: 320px;}
+		.audiolist audio{width: 100%;max-width:}
+		.audiolist audio{width: 100%;max-width: 640px;min-width: 320px;}
+
     </style>
 </head>
 <body>
     <div class="box">
-        <ul class="list" id="list">           
-        </ul>
+		<div class="audiolist">
+			<ul class="audioul">				
+				<li>
+					<p>徐歌阳 - 追梦赤子心</p>
+					<p>
+						<audio src="./mp3/徐歌阳 - 追梦赤子心 (Live).mp3" controls="controls" autoplay="autoplay"></audio>
+					</p>					
+				</li>
+			</ul>
+			
+		</div>
+        <ul class="list" id="list"></ul>
     </div>
     <script>
         let oList = document.querySelector("#list");
